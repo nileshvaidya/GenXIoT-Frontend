@@ -1,7 +1,7 @@
 import React from 'react'
 import { StringLiteral } from 'typescript';
-import { features } from '../constants';
-import styles, { layout } from '../style';
+import { features } from '../../constants';
+import styles, { layout } from '../../style';
 import Button from './Button';
 
 interface FeatureCardsItems {

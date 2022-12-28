@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { close, logo,menu } from '../assets';
+import { close, logo,menu } from '../../assets/';
 
-import { navLinks } from '../constants';
+import { navLinks } from '../../constants';
 console.log(logo);
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
     return (
       <nav className='w-full flex py-6 justify-between items-center navbar'>
-       <div> <img src={require("../assets/logo.svg").default} alt = "GenXIoT" className='w-[124px] h-[32px]'/></div>
+       <div> <img src={require("../../assets/logo.svg").default} alt = "GenXIoT" className='w-[124px] h-[32px]'/></div>
       
 
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>

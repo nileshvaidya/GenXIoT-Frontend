@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   mode: "jit",
   theme: {
     extend: {
+      borderColor: theme => ({
+        DEFAULT: theme('colors.gray.300', 'currentColor'),
+        'neon': '#ccff00',
+      }),
+      backgroundColor: theme => ({
+        'neon':'#ccff00',
+      }),
       colors: {
         primary: "#00040f",
         secondary: "#00f6ff",
@@ -23,5 +31,10 @@ module.exports = {
       xl: "1700px",
     },
   },
+  variants: {
+    extend: {
+      backgroundColor:['checked'],
+    },
+  },
   plugins: [],
-};
+});

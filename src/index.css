@@ -71,7 +71,12 @@
     #14101d 95.11%
   );
 }
-
+.bg-pink-purple-gradient {
+  background: radial-gradient(
+    #d63877 70%,
+    #5f298f 91.61%
+  )  
+}
 .bg-discount-gradient {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
@@ -83,6 +88,10 @@
 .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.width-80{
+  width:80vw;
 }
 
 @-webkit-keyframes slide-top {
@@ -138,7 +147,19 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
-
+.background-red{
+  background-color: red;
+}
+.background-green{
+  background-color: green;
+}
+#toggle-switch::after{
+  content: '';
+  @apply h-32 w-32 rounded-full bg-neon absolute left-0 top-0 transform scale-110 transition duration-200;
+}
+#toogle-switch:checked::after{
+  @apply transform scale-110 translate-x-32;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

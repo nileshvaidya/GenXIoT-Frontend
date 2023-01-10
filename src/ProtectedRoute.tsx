@@ -9,5 +9,7 @@ export const ProtectedRoute = ({ children }) => {
     // user is not authenticated
     return <Login />;
   }
+  console.log(("Going to Demo"));
+  
   return children;
 };

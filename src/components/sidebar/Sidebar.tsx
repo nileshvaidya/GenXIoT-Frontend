@@ -3,7 +3,8 @@ import {MdLocationPin,MdDevices,MdDashboard,MdAccessAlarms,MdSettings,MdSubscrip
 import {HiUserCircle, HiMenuAlt3 } from 'react-icons/hi';
 import { FaHouseUser, FaUsers } from 'react-icons/fa';
 import { TbReportAnalytics } from 'react-icons/tb';
-import {BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+import styles from '../../style';
 const Sidebar = () => {
   const menus = [
     { name: "Tenants", link: "/", icon: FaHouseUser },
@@ -19,9 +20,9 @@ const Sidebar = () => {
   ];
   const [open, setOpen] = useState(true);
   return (
-    // <BrowserRouter>
+    // <BrowserRouter> className={`${styles.boxWidth}`}min-h-screen ${styles.sidebarHeight}
     <section className="flex position-absolute gap-1 mt-5 ml-5">
-        <div className={`bg-[#0e0e0e] min-h-screen ${open ? 'w-72' : 'w-16' } duration-500 text-gray-100 px-4`}>
+        <div className={`bg-[#0e0e0e] min-h-screen   ${open ? 'w-72' : 'w-16' } duration-500 text-gray-100 px-4`}>
         <div className='py-3 flex justify-end'>
           <HiMenuAlt3 size={26} className = 'cursor-pointer' onClick={() => setOpen(!open)} />
         </div>

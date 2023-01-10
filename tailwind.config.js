@@ -12,6 +12,10 @@ module.exports = withMT({
       backgroundColor: theme => ({
         'neon':'#ccff00',
       }),
+      backgroundImage:{
+        'login-page':"url('assets/login.png')",
+
+      },
       colors: {
         primary: "#00040f",
         secondary: "#00f6ff",
@@ -34,7 +38,9 @@ module.exports = withMT({
   variants: {
     extend: {
       backgroundColor:['checked'],
+     
     },
   },
   plugins: [],
-});
+}
+);

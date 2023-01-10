@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Home from './pages/Home/Home';
+import Demo from './pages/demo/Demo';
 import { ProtectedRoute } from './ProtectedRoute';
 import { useCookies } from 'react-cookie';
 import { useStateValue } from './store/StateProvider';
@@ -43,6 +44,13 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Home />
+              </ProtectedRoute>
+            }
+          />
+           <Route path="/demo"
+            element={
+              <ProtectedRoute>
+                <Demo />
               </ProtectedRoute>
             }
           />

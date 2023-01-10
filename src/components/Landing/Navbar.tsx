@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { close, logo, menu } from '../../assets/';
+import { close, logo,logo1, menu } from '../../assets/';
 
 
 import { navLinks } from '../../constants';
@@ -15,7 +15,7 @@ const Navbar = () => {
   }
     return (
       <nav className='w-full flex py-6 justify-between items-center navbar'>
-       <div> <img src={require("../../assets/logo.svg").default} alt = "GenXIoT" className='w-[124px] h-[32px]'/></div>
+       <div> <img src={logo1} alt = "GenXIoT" className='w-[124px] h-[32px]'/></div>
       
 
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>

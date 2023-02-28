@@ -26,6 +26,9 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import login from "./login.png";
 import scada from "./SCADA.gif";
+import background from "./GFMachine.png";
+import red from './red.png';
+import green from './green.png';
 export {
   airbnb,
   bill,
@@ -55,4 +58,7 @@ export {
   people03,
   login,
   scada,
+  background,
+  red,
+  green,
 };

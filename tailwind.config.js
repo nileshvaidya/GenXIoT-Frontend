@@ -3,6 +3,8 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   mode: "jit",
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: "class",
   theme: {
     extend: {
       borderColor: theme => ({
@@ -25,6 +27,28 @@ module.exports = withMT({
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      animation: {
+        toastIn: "toastIn .8s both",
+        toastOut: "toastOut .8s both",
+      },
+      keyframes: {
+        toastIn: {
+          "0%": {
+            transform: "var(--elm-translate) scale(0.7)",
+            opacity: 0.7,
+          },
+          "80%": { transform: "translate(0px) scale(0.7)", opacity: 0.7 },
+          "100%": { transform: "scale(1)", opacity: 1 },
+        },
+        toastOut: {
+          "0%": { transform: "scale(1)", opacity: 1 },
+          "20%": { transform: "translate(0px) scale(0.7)", opacity: 0.7 },
+          "100%": {
+            transform: "var(--elm-translate) scale(0.7)",
+            opacity: 0.7,
+          },
+        },
+      
     },
     screens: {
       xs: "480px",
@@ -38,9 +62,12 @@ module.exports = withMT({
   variants: {
     extend: {
       backgroundColor:['checked'],
+      textColor:['visited'],
      
     },
   },
+},
+
   plugins: [],
-}
-);
+})
+
